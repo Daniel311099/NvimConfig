@@ -58,6 +58,19 @@ Plug 'https://github.com/integralist/vim-mypy'
 
 Plug 'xiyaowong/transparent.nvim'
 
+Plug 'nvim-lualine/lualine.nvim'
+Plug 'nvim-tree/nvim-web-devicons'
+
+Plug 'EdenEast/nightfox.nvim' " Vim-Plug
+
+Plug 'morhetz/gruvbox'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+
+" Plug 'dccsillag/magma-nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'https://github.com/dccsillag/magma-nvim/commit/c31b19efd5533d33a275c604f04736118b6c3a2e', { 'do': ':UpdateRemotePlugins' }
+Plug 'edluffy/hologram.nvim'
+
+Plug 'nvim-treesitter/nvim-treesitter-refactor'
 
 call plug#end()
 
