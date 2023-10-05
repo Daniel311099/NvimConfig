@@ -71,14 +71,28 @@ Plug 'https://github.com/dccsillag/magma-nvim/commit/c31b19efd5533d33a275c604f04
 Plug 'edluffy/hologram.nvim'
 
 Plug 'nvim-treesitter/nvim-treesitter-refactor'
+Plug 'frazrepo/vim-rainbow'
+Plug 'mfussenegger/nvim-jdtls'
 
+Plug 'mfussenegger/nvim-dap'
+Plug 'theHamsta/nvim-dap-virtual-text'
+Plug 'mfussenegger/nvim-dap-python'
+Plug 'rcarriga/nvim-dap-ui'
+Plug 'folke/neodev.nvim'
+
+
+Plug 'https://github.com/907th/vim-auto-save'
+
+Plug 'jupyter-vim/jupyter-vim'
+set shell=/bin/zsh\ -i
 call plug#end()
 
-lua <<EOF
+" let g:rainbow_active = 1
+lua << EOF
 
-  require('config')
+	require('config')
 
-  --require('after.plugin.telescope')
-  --require('telescope.health').check()  
-  -- Set up nvim-cmp.
+--require('after.plugin.telescope')
+--require('telescope.health').check()  
+-- Set up nvim-cmp.
 EOF

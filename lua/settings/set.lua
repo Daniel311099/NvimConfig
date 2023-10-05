@@ -9,8 +9,7 @@ vim.cmd.colorscheme("tokyonight-night")
 -- vim.cmd.colorscheme("gruvbox")
 -- set font to fontforge
 --vim.opt.guifont = "3270 Nerd Font Regular:h12"
-
 vim.g.NERDTreeWinPos = "right"
 -- vim.opt.hlsearch = false
-
--- {'asdve'}
+vim.g.rainbow_active = true
+vim.g.auto_save = 1

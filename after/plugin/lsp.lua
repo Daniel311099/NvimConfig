@@ -22,7 +22,7 @@ cmp.setup({
 lsp.on_attach(function(client, bufnr)
 	-- see :help lsp-zero-keybindings
 	-- to learn the available actions
-	-- lsp.default_keymaps({buffer = bufnr})
+	lsp.default_keymaps({buffer = bufnr})
 end)
 -- (Optional) Configure lua language server for neovim
 
@@ -54,4 +54,10 @@ lspconfig.pyright.setup {
 		},
 	},
 }
+lspconfig.tsserver.setup {}
+-- setup lua language server 
+lspconfig.lua_ls.setup {}
+-- lspconfig.jtdls.setup {}
+
+lsp.skip_server_setup({'jdtls'})
 lsp.setup()
