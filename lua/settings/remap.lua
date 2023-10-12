@@ -9,6 +9,7 @@ vim.keymap.set("n", "<leader>w", ":w<CR>")
 vim.keymap.set("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>")
 vim.keymap.set("n", "<leader>fg", ":RG<CR>")
 vim.keymap.set("n", "<leader>tr", ":NERDTreeToggle<CR>")
+vim.keymap.set("n", "<leader>g", ":LazyGit<CR>")
 
 vim.keymap.set("n", "fr", vim.lsp.buf.references)
 vim.keymap.set("n", "fd", vim.lsp.buf.definition)
@@ -34,8 +35,13 @@ vim.keymap.set("n", "<leader>dt", ":DapToggleBreakpoint<CR>", {noremap = true, s
 vim.keymap.set("n", "<leader>dc", ":DapContinue<CR>", {noremap = true, silent = true})
 vim.keymap.set("n", "<leader>ds", ":DapStepOver<CR>", {noremap = true, silent = true})
 vim.keymap.set("n", "<leader>di", ":DapStepInto<CR>", {noremap = true, silent = true})
---close 
 --
+
+vim.keymap.set("n", "<leader>jc", ":JupyterConnect<CR>", {noremap = true, silent = true})
+vim.keymap.set("n", "<leader>jr", ":JupyterSendCell<CR>", {noremap = true, silent = true})
+vim.keymap.set("n", "<leader>jf", ":JupyterRunFile<CR>", {noremap = true, silent = true})
+
+
 -- map leader nt to open new tabs
 vim.keymap.set("n", "<leader>nt", ":tabnew<CR>")
 --map option shift right or left to go to next tabs

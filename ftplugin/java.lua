@@ -114,10 +114,10 @@ local config = {
 			-- The `name` is NOT arbitrary, but must match one of the elements from `enum ExecutionEnvironment` in the link above
 			configuration = {
 				runtimes = {
-					-- {
-					-- 	name = "JavaSE-17",
-					-- 	path = "/opt/homebrew/Cellar/openjdk@17/17.0.8.1"
-					-- },
+					{
+						name = "JavaSE-17",
+						path = "/opt/homebrew/Cellar/openjdk@17/17.0.8.1"
+					},
 					-- {
 					-- 	name = "JavaSE-17",
 					-- 	path = home .. "/.asdf/installs/java/corretto-17.0.4.9.1",
@@ -168,12 +168,12 @@ local config = {
 		-- Use the workspace_folder defined above to store data for this project
 		'-data', workspace_folder,
 	},
-	init_options = {
-		bundles = {
-    		-- vim.fn.glob("/Users/danielfisaha/.config/nvim/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-0.49.0.jar")
-    		vim.fn.glob("/Users/danielfisaha/.config/nvim/java-debug/com.microsoft.java.debug.plugin-*.jar")
-		}
-	}
+	-- init_options = {
+	-- 	bundles = {
+    		-- -- vim.fn.glob("/Users/danielfisaha/.config/nvim/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-0.49.0.jar")
+    		-- vim.fn.glob("/Users/danielfisaha/.config/nvim/java-debug/com.microsoft.java.debug.plugin-*.jar")
+	-- 	}
+	-- }
 
 }
 -- config['init_options'] = {

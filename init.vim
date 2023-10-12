@@ -84,7 +84,14 @@ Plug 'folke/neodev.nvim'
 Plug 'https://github.com/907th/vim-auto-save'
 
 Plug 'jupyter-vim/jupyter-vim'
-set shell=/bin/zsh\ -i
+Plug 'kdheepak/lazygit.nvim'
+
+" post install (yarn install | npm install) then load plugin only for editing supported files
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install --frozen-lockfile --production',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
+
+" set shell=/bin/zsh\ -i
 call plug#end()
 
 " let g:rainbow_active = 1

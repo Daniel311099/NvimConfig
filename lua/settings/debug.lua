@@ -5,21 +5,22 @@ require("neodev").setup({
 })
 require("dap-python").setup("python3")
 local dap = require('dap')
-dap.adapters.java = {}
--- dap.adapters.java = {
--- 	type = 'mvn',
--- 	command = "/opt/homebrew/Cellar/openjdk@17/17.0.8.1/bin/java"
--- }
--- configure adapter to use maven
+-- dap.adapters.java = {}
+ -- dap.adapters.java = {
+ -- 	type = 'mvn',
+ -- 	command = "/opt/homebrew/Cellar/openjdk@17/17.0.8.1/bin/java"
+ -- }
+ -- configure adapter to use maven
 --dap.adapters.java = {
 --	type = 'executable',
---	command = '/opt/homebrew/Cellar/openjdk@17/17.0.8.1/bin/java',
+--	-- command = '/opt/homebrew/Cellar/openjdk@17/17.0.8.1/bin/java',
 --	-- command = '/Library/Java/JavaVirtualMachines/temurin-16.jdk/Contents/Home/bin/java',
+--	command = 'mvn -f pom.xml compile exec:java',
 --	args = {
 --		-- '-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=127.0.0.1:5005',
 --		'-jar',
 
---		-- '/opt/homebrew/Cellar/jdtls/1.28.0/libexec/plugins/org.eclipse.equinox.launcher_1.6.500.v20230717-2134.jar',
+--		'/opt/homebrew/Cellar/jdtls/1.28.0/libexec/plugins/org.eclipse.equinox.launcher_1.6.500.v20230717-2134.jar',
 --		--
 --		'-data',
 --		'/Users/danielfisaha/.config/nvim/java-debug',
@@ -42,8 +43,8 @@ end
 -- print_table(dap.adapters.java)
 
 dap.configurations.java = {{
-	-- classPaths = {},
-	classPaths = {"/Users/danielfisaha/.config/nvim/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-0.49.0.jar"},
+	classPaths = {},
+	-- classPaths = {"/Users/danielfisaha/.config/nvim/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-0.49.0.jar"},
 	modulePaths = {},
 
 	-- javaExec = "/opt/homebrew/Cellar/openjdk@17/17.0.8.1/bin/java",
