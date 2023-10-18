@@ -59,5 +59,7 @@ lspconfig.tsserver.setup {}
 lspconfig.lua_ls.setup {}
 -- lspconfig.jtdls.setup {}
 
+lspconfig.marksman.setup {}
+
 lsp.skip_server_setup({'jdtls'})
 lsp.setup()

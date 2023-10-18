@@ -176,11 +176,11 @@ local config = {
 	-- }
 
 }
--- config['init_options'] = {
---   bundles = {
---     vim.fn.glob("/Users/danielfisaha/.config/nvim/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-*.jar", 1)
---   };
--- }
+config['init_options'] = {
+  bundles = {
+    vim.fn.glob("/Users/danielfisaha/.config/nvim/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-*.jar", 1)
+  };
+}
 
 -- Finally, start jdtls. This will run the language server using the configuration we specified,
 -- setup the keymappings, and attach the LSP client to the current buffer
