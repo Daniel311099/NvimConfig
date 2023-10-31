@@ -9,6 +9,7 @@ vim.keymap.set("n", "<leader>w", ":w<CR>")
 vim.keymap.set("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>")
 vim.keymap.set("n", "<leader>fg", ":RG<CR>")
 vim.keymap.set("n", "<leader>tr", ":NERDTreeToggle<CR>")
+vim.keymap.set("n", "<leader>Tr", ":NERDTreeFocus<CR>")
 vim.keymap.set("n", "<leader>g", ":LazyGit<CR>")
 
 vim.keymap.set("n", "fr", vim.lsp.buf.references)

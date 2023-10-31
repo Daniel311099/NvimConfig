@@ -13,9 +13,9 @@ local dap = require('dap')
  -- configure adapter to use maven
 --dap.adapters.java = {
 --	type = 'executable',
---	-- command = '/opt/homebrew/Cellar/openjdk@17/17.0.8.1/bin/java',
+--	command = '/opt/homebrew/Cellar/openjdk@17/17.0.8.1/bin/java',
 --	-- command = '/Library/Java/JavaVirtualMachines/temurin-16.jdk/Contents/Home/bin/java',
---	command = 'mvn -f pom.xml compile exec:java',
+--	-- command = 'mvn -f pom.xml compile exec:java',
 --	args = {
 --		-- '-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=127.0.0.1:5005',
 --		'-jar',
@@ -28,13 +28,13 @@ local dap = require('dap')
 --	},
 --	name = "java-debug"
 --}
-local function print_table(tables)
+--local function print_table(tables)
 	-- print(tables[1])
-	for k,v in pairs(tables) do
-		print(k,v)
-		-- print_table(v)
-	end
-end
+	-- for k,v in pairs(tables) do
+	-- 	print(k,v)
+	-- 	-- print_table(v)
+	-- end
+-- end
 -- local dap_adapters_table = dap.adapters.java
 -- dap_adapters_table.command = "/opt/homebrew/Cellar/openjdk@17/17.0.8.1/bin/java"
 -- dap_adapters_table.type = "executable"
@@ -47,7 +47,7 @@ dap.configurations.java = {{
 	-- classPaths = {"/Users/danielfisaha/.config/nvim/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-0.49.0.jar"},
 	modulePaths = {},
 
-	-- javaExec = "/opt/homebrew/Cellar/openjdk@17/17.0.8.1/bin/java",
+	javaExec = "/opt/homebrew/Cellar/openjdk@17/17.0.8.1/bin/java",
 	-- javaExec = "/Library/Java/JavaVirtualMachines/temurin-16.jdk/Contents/Home/bin/java",
 	-- javaExec = "/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin/java",
 	-- mainClass = "com.example.App",

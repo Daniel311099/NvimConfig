@@ -55,6 +55,7 @@ lspconfig.pyright.setup {
 	},
 }
 lspconfig.tsserver.setup {}
+lspconfig.es_lint.setup {}
 -- setup lua language server 
 lspconfig.lua_ls.setup {}
 -- lspconfig.jtdls.setup {}
