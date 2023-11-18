@@ -2,7 +2,7 @@ call plug#begin()
 
 Plug 'sbdchd/neoformat'
 
-Plug 'nvim-lua/completion-nvim'
+" Plug 'nvim-lua/completion-nvim'
 
 Plug 'hrsh7th/vim-vsnip'
 Plug 'hrsh7th/vim-vsnip-integ'
@@ -91,7 +91,10 @@ Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install --frozen-lockfile --production',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
 
+Plug 'czheo/mojo.vim'
 " set shell=/bin/zsh\ -i
+Plug 'folke/trouble.nvim', { 'on': 'TroubleToggle' }
+Plug 'nvim-tree/nvim-web-devicons' " Assuming you also want this plugin
 call plug#end()
 
 " let g:rainbow_active = 1
