@@ -1,0 +1,2 @@
+-- require("mini").setup()
+require("mini.surround").setup()

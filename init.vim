@@ -77,13 +77,15 @@ Plug 'mfussenegger/nvim-jdtls'
 Plug 'mfussenegger/nvim-dap'
 Plug 'theHamsta/nvim-dap-virtual-text'
 Plug 'mfussenegger/nvim-dap-python'
+Plug 'nvim-neotest/nvim-nio'
 Plug 'rcarriga/nvim-dap-ui'
+Plug 'jay-babu/mason-nvim-dap.nvim'
 Plug 'folke/neodev.nvim'
 
 
 Plug 'https://github.com/907th/vim-auto-save'
 
-Plug 'jupyter-vim/jupyter-vim'
+" Plug 'jupyter-vim/jupyter-vim'
 Plug 'kdheepak/lazygit.nvim'
 
 " post install (yarn install | npm install) then load plugin only for editing supported files
@@ -95,6 +97,7 @@ Plug 'czheo/mojo.vim'
 " set shell=/bin/zsh\ -i
 Plug 'folke/trouble.nvim', { 'on': 'TroubleToggle' }
 Plug 'nvim-tree/nvim-web-devicons' " Assuming you also want this plugin
+Plug 'echasnovski/mini.nvim', { 'branch': 'stable' }
 call plug#end()
 
 " let g:rainbow_active = 1
@@ -102,6 +105,7 @@ lua << EOF
 
 	require('config')
 
+require("after.plugin.mini")
 --require('after.plugin.telescope')
 --require('telescope.health').check()  
 -- Set up nvim-cmp.

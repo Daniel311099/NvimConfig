@@ -47,12 +47,22 @@ end)
 -- (Optional) Configure lua language server for neovim
 
 
+-- add for c++ lsp
+-- lspconfig.clangd.setup({
+-- 	on_attach = custom_attach,
+-- 	capabilities = lsp.capabilities,
+-- 	flags = {
+-- 		debounce_text_changes = 150,
+-- 	},
+-- })
+
 
 require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
 -- set mypy as a linting server
 local lspconfig = require("lspconfig")
 lspconfig.pyright.setup {
-	-- on_attach = custom_attach,
+	on_attach = custom_attach,
+	
 	settings = {
 		pyright = {
 			plugins = {
@@ -65,29 +75,74 @@ lspconfig.pyright.setup {
 				-- pyflakes = { enabled = false },
 				-- pycodestyle = { enabled = false },
 				-- type checker
-				pylsp_mypy = { enabled = true },
+				-- pylsp_mypy = { enabled = true },
+				mypy = { enabled = true },
 				-- auto-completion options
 				jedi_completion = { fuzzy = true },
 				-- import sorting
-				-- pyls_isort = { enabled = true },
+				pyls_isort = { enabled = true },
 			},
 		},
 	},
 }
 
+-- lspconfig.mypy.setup {
+-- 	on_attach = custom_attach,
+	
+-- 	settings = {
+-- 		pyright = {
+-- 			plugins = {
+-- 				-- formatter options
+-- 				-- black = { enabled = true },
+-- 				-- autopep8 = { enabled = false },
+-- 				-- yapf = { enabled = false },
+-- 				-- linter options
+-- 				-- pylint = { enabled = true, executable = "pylint" },
+-- 				-- pyflakes = { enabled = false },
+-- 				-- pycodestyle = { enabled = false },
+-- 				-- type checker
+-- 				pylsp_mypy = { enabled = true },
+-- 				mypy = { enabled = true },
+-- 				-- auto-completion options
+-- 				-- jedi_completion = { fuzzy = true },
+-- 				-- import sorting
+-- 				-- pyls_isort = { enabled = true },
+-- 			},
+-- 		},
+-- 	},
+-- }
+
 lspconfig.tsserver.setup({})
 -- lspconfig.es_lint.setup({})
 -- setup lua language server 
-lspconfig.lua_ls.setup({})
+-- lspconfig.lua_ls.setup({})
 -- lspconfig.jtdls.setup {}
 
-require('prettier').setup({
-	-- Specify the file types you want to format with Prettier
-	filetypes = { "javascript", "typescript", "jsx", "typescriptreact", "json", "css", "scss", "markdown" },
-	-- If you want to use eslint_d for javascript and typescript
-	-- Specify
+-- lspconfig.clang.setup{}
 
-})
+-- local prettier = require("prettier")
+
+-- Enable Prettier for supported filetypes
+-- prettier.setup {
+--   filetype = {
+--     javascript = { "prettier" },
+--     javascriptreact = { "prettier" },
+--     typescript = { "prettier" },
+--     typescriptreact = { "prettier" },
+--     html = { "prettier" },
+--     json = { "prettier" },
+--     markdown = { "prettier" },
+--   },
+-- }
+
+
+-- require('prettier').setup({
+-- 	-- Specify the file types you want to format with Prettier
+-- 	filetypes = { "javascript", "typescript", "jsx", "typescriptreact", "json", "css", "scss", "markdown" },
+-- 	-- If you want to use eslint_d for javascript and typescript
+-- 	-- Specify
+--
+-- })
 
 -- Enable Prettier on save
 vim.api.nvim_exec([[

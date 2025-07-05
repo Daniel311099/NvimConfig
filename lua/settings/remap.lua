@@ -16,6 +16,8 @@ vim.keymap.set("n", "fr", vim.lsp.buf.references)
 vim.keymap.set("n", "fd", vim.lsp.buf.definition)
 vim.keymap.set("n", "fD", vim.lsp.buf.declaration)
 vim.keymap.set("n", "fi", vim.lsp.buf.implementation)
+      -- { "<leader>cr", vim.lsp.buf.rename, desc = "Rename", has = "rename" }, add rename as a keymap
+vim.keymap.set("n", "fc", vim.lsp.buf.rename)
 
 vim.keymap.set("n", "<leader>bn", ":bn<CR>")
 vim.keymap.set("n", "<leader>bp", ":bp<CR>")
@@ -58,9 +60,13 @@ vim.keymap.set("n", "<leader>nW", ":sp<CR>")
 vim.keymap.set("n", "<leader>cw", ":bd<CR>")
 ----map option n to swicth to window n
 vim.keymap.set("n", "<M-n>", ":<C-u>tabn<Space>")
+-- explain the above line, how to do <M-n>: ~/<M-n>
+-- 
+
 
 -- map option shift f to format the code
 -- vim.keymap.set("n", "<M-S-f>", ":Format<CR>")
+vim.keymap.set("n", "<M-l>", "gg=G")
 --
 -- map esc to close the terminal
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
