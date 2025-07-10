@@ -41,7 +41,7 @@ Plug 'w0rp/ale'
 
 Plug 'folke/tokyonight.nvim'
 
-Plug 'github/copilot.vim'
+""Plug 'github/copilot.vim'
 
 Plug 'https://tpope.io/vim/commentary.git'
 
@@ -105,8 +105,9 @@ lua << EOF
 
 	require('config')
 
-require("after.plugin.mini")
+-- require("after.plugin.mini")
 --require('after.plugin.telescope')
 --require('telescope.health').check()  
 -- Set up nvim-cmp.
+
 EOF

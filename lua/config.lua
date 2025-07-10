@@ -8,7 +8,7 @@ require('hologram').setup{
 print("Loaded settings.remap")
 -- require("mini").setup()
 -- require('mini.surround').setup()
-require("after.plugin.mini")
+-- require("after.plugin.mini")
 -- mappings = { 
 --     add = 'sa', -- Add surrounding in Normal and Visual modes
 --     delete = 'sd', -- Delete surrounding

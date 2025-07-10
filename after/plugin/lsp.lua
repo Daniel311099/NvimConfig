@@ -61,8 +61,7 @@ require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
 -- set mypy as a linting server
 local lspconfig = require("lspconfig")
 lspconfig.pyright.setup {
-	on_attach = custom_attach,
-	
+	-- on_attach = custom_attach,
 	settings = {
 		pyright = {
 			plugins = {
@@ -112,7 +111,7 @@ lspconfig.pyright.setup {
 -- 	},
 -- }
 
-lspconfig.tsserver.setup({})
+-- lspconfig.tsserver.setup({})
 -- lspconfig.es_lint.setup({})
 -- setup lua language server 
 -- lspconfig.lua_ls.setup({})
@@ -145,9 +144,9 @@ lspconfig.tsserver.setup({})
 -- })
 
 -- Enable Prettier on save
-vim.api.nvim_exec([[
-autocmd BufWritePre *.js,*.ts,*.jsx,*.tsx,*.json,*.css,*.scss,*.md :Prettier
-]], false)
+--vim.api.nvim_exec([[
+--autocmd BufWritePre *.js,*.ts,*.jsx,*.tsx,*.json,*.css,*.scss,*.md :Prettier
+-- ]], false)
 
 
 -- require('plenary.reload').reload_module('lspconfig', true)
