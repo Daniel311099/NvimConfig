@@ -5,7 +5,7 @@ require("settings.debug")
 require('hologram').setup{
     auto_display = true -- WIP automatic markdown image display, may be prone to breaking
 }
-print("Loaded settings.remap")
+-- print("Loaded settings.remap")
 -- require("mini").setup()
 -- require('mini.surround').setup()
 -- require("after.plugin.mini")
